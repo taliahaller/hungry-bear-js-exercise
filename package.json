@@ -1,7 +1,7 @@
 {
   "name": "webpack-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "#### An easy to use template for webpack at epicodus, Javascript week 1 10/1/2018",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -43,5 +43,13 @@
     "eslint-loader": "^2.0.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taliahaller/website-portfolio-about.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taliahaller/website-portfolio-about/issues"
+  },
+  "homepage": "https://github.com/taliahaller/website-portfolio-about#readme"
 }

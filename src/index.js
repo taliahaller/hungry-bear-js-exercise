@@ -1,17 +1,12 @@
 import './scss/styles.scss';
-import { pingPong } from './ping-pong.js';
+// import { pingPong } from './ping-pong.js';
+import { HungryBear } from './js/hungrybear.js';
 import $ from 'jquery';
 
 
 
 
 $(document).ready(function(){
-  $('#ping-pong-form').submit(function(event){
-    event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
-  });
+  console.log("hello");
+  HungryBear();
 });
