@@ -1,10 +1,12 @@
-import { HungryBear } from './../src/js/hungrybear.js';
+import { bear } from './../src/js/hungrybear.js';
 
 describe('HungryBear', function() {
-  let fuzzy = new HungryBear("Fuzzy");
+  let fuzzy = bear;
 
   beforeEach(function() {
     jasmine.clock().install();
+    fuzzy.foodLevel = 10;
+    fuzzy.name = "Fuzzy";
     fuzzy.setHunger();
   });
 
@@ -33,19 +35,24 @@ describe('HungryBear', function() {
     expect(fuzzy.didYouGetEaten()).toEqual(true);
   });
 
-  it('should have a food level of ten if it is fed', function() {
-    jasmine.clock().tick(3001);
-    fuzzy.feed();
-    expect(fuzzy.foodLevel).toEqual(10);
-    // expect(fuzzy.foodLevel).toEqual(10);
-  });
+  it('should return that the bear ate blueberries and the food level should go up 5', function() {
+     expect(fuzzy.eatSmall("blueberries")).toEqual("The bear ate the blueberries! Food level goes up 5!");
+     expect(fuzzy.foodLevel).toEqual(15);
+   });
 
-  it('should not be able to be fed after it has eaten its feeder', function() {
-    fuzzy.didYouGetEaten === true;
-    fuzzy.feed();
-    // expect(this.deadFeeder = true);
-    expect(this.foodLevel = 0);
-  })
+  // it('should have a food level of ten if it is fed', function() {
+  //   jasmine.clock().tick(3001);
+  //   fuzzy.feed();
+  //   expect(fuzzy.foodLevel).toEqual(10);
+  //   // expect(fuzzy.foodLevel).toEqual(10);
+  // });
+  //
+  // it('should not be able to be fed after it has eaten its feeder', function() {
+  //   fuzzy.didYouGetEaten === true;
+  //   fuzzy.feed();
+  //   // expect(this.deadFeeder = true);
+  //   expect(this.foodLevel = 0);
+  // })
 
 
 });
